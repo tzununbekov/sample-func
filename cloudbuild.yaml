@@ -1,0 +1,12 @@
+serviceAccountName: build
+source:
+    git:
+      url: https://github.com/sebgoa/functions.git
+      revision: master
+steps:
+- name: ls
+  image: busybox
+  args: ['ls']
+- name: fail
+  image: busybox
+  args: ['foo']
