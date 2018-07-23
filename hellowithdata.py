@@ -3,4 +3,4 @@ def handler(event, context):
         print event['data']
     except:
         pass
-    return "ok google"
+    return "ok google, deploy this"
