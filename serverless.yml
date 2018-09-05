@@ -11,5 +11,6 @@ functions:
   hellowithdata:
     handler: hellowithdata.handler
     events:
+      - schedule: cron(*/10 * * * *)
       - http:
-          method: get
+      - trigger: kafka.test.topic
