@@ -1,16 +1,13 @@
-service: time
+
+service: serverless-foobar
+description: "serverless.yaml recursive include parsing test"
 
 provider:
-  name: foo
-  runtime: python2.7
-
-plugins:
-  - serverless-kubeless
+  name: triggermesh
 
 functions:
-  hellowithdata:
-    handler: hellowithdata.handler
-    events:
-      - schedule: cron(*/10 * * * *)
-      - http:
-      - trigger: kafka.test.topic
+  py2:
+    handler: handler.py
+    runtime: https://raw.githubusercontent.com/triggermesh/openfaas-runtime/master/python2.7/openfaas-python2.7-runtime.yaml
+    environment:
+      FUNCTION: py2
