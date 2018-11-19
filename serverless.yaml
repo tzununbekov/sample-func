@@ -7,7 +7,7 @@ provider:
 
 functions:
   py2:
-    handler: handler.py
+    handler: hellowithdata.py
     runtime: https://raw.githubusercontent.com/triggermesh/openfaas-runtime/master/python2.7/openfaas-python2.7-runtime.yaml
     environment:
       FUNCTION: py2
